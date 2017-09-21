@@ -20,6 +20,15 @@
                     your registered email is <b>{{ Auth::user() -> email }}</b>.
                     <br/><br/>
 
+                    <h3><b>Add a task:</b></h3>
+                    <form action="/home/add_task" method="POST">
+                        <input type="text" name="task_title" value="" placeholder="Enter task title" />
+                        <input type="text" name="task_description" value="" placeholder="Enter task description" />
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                        <input type="submit" />
+                    </form>
+                    <br/>
+
                     <h3><b>Here are the tasks for today:</b></h3>
                     @foreach($tasks as $task)
                         <table class="table">
