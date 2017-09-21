@@ -15,14 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 /**
- * ---------------------------------------------------------------------------
+ * ------------------------------------------------------------------------
  * Routes for authentication
  * From Laravel project: https://github.com/laravel/framework/blob/5.3/src/Illuminate/Routing/Router.php
- * ---------------------------------------------------------------------------
+ * ------------------------------------------------------------------------
  *
  * $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
  * $this->post('login', 'Auth\LoginController@login');
@@ -37,7 +37,7 @@ Route::get('/home', 'HomeController@index')->name('home');
  * $this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
  * $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
  * $this->post('password/reset', 'Auth\ResetPasswordController@reset');
- * 
+ *
  */
 
 // Helper class that helps you generate all the routes required for user authentication
