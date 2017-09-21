@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    protected $tasksTable = NULL;
+
     /**
      * Create a new controller instance.
      *
@@ -14,6 +17,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->tasksTable = DB::table('tasks');
     }
 
     /**
@@ -23,6 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $tasks = $this->tasksTable->get();
+        return view('home', ['tasks' => $tasks]);
     }
 }
