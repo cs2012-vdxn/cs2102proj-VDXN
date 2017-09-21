@@ -14,8 +14,10 @@
                         </div>
                     @endif
 
-                    Welcome to your dashboard, {{ Auth::user()->name }}.
-                    You joined us at {{ Auth::user() -> created_at }}.
+                    Welcome to your dashboard, <b>{{ Auth::user()->name }}</b>.
+                    <br/><br/>
+                    You joined us at <b>{{ Auth::user() -> created_at }}</b> and
+                    your registered email is <b>{{ Auth::user() -> email }}</b>.
                 </div>
             </div>
         </div>
