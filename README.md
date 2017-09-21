@@ -11,6 +11,7 @@ CS2102 Database Systems PHP, Postgres web app using the Laravel framework
 
 # SETUP
 ## What you'll need
+* Latest version of PHP 7.x
 * Download & install PHP's dependency management tool [Composer](https://getcomposer.org/download/)
 * Install [Laravel](https://laravel.com/docs/5.5/installation)
 * Download / Clone this repo
