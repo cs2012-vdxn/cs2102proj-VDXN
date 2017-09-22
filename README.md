@@ -18,11 +18,13 @@ CS2102 Database Systems PHP, Postgres web app using the Laravel framework
 * Fresh database (you can create a new one using pgAdmin4)
 
 ## 1. Setting up your credentials, schemas & seed data for DB
-**Note:** I did not upload my `.env` file since it contains my own local DB credentials, but you can refer to the uploaded `.env.example` file for an example of what fields to change. All fields in `[]` square brackets are what you'll need to change for your project.
 
-1. Run `php artisan migrate` to create the tables `users` & `password_resets` & `tasks`. `users` and `password_resets` are used for simple authentication and `tasks` is a simple table which will contain our tasks.
+1. Rename `.env.example` to `.env`. These are the environment variables that Laravel will need to verify keys & credentials.
+> **Note:** I did not upload my `.env` file since it contains my own local DB credentials, but you can refer to the uploaded `.env.example` file for an example of what fields to change. All fields in `[]` square brackets are what you'll need to change for your project.
 
-2. Run `php artisan db:seed --class=TasksTableSeeder` which creates 3 rows in the `tasks` table.
+2. Run `php artisan migrate` to create the tables `users` & `password_resets` & `tasks`. `users` and `password_resets` are used for simple authentication and `tasks` is a simple table which will contain our tasks.
+
+3. Run `php artisan db:seed --class=TasksTableSeeder` which creates 3 rows in the `tasks` table.
 
 
 ## 2. Run this project
